@@ -13,6 +13,7 @@ import type { ComponentType, Context } from 'react';
 import StyleSheet from '../StyleSheet';
 import View from '../View';
 import React, { createContext } from 'react';
+import { AlertProvider } from '../Alert';
 
 type Props = {
   WrapperComponent?: ?ComponentType<*>,
@@ -36,9 +37,11 @@ export default function AppContainer(props: Props) {
 
   return (
     <RootTagContext.Provider value={props.rootTag}>
+      <AlertProvider>
       <View pointerEvents="box-none" style={styles.appContainer}>
         {innerView}
       </View>
+      </AlertProvider>
     </RootTagContext.Provider>
   );
 }
