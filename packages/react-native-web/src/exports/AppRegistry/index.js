@@ -13,7 +13,7 @@ import React from "react"
 import invariant from 'fbjs/lib/invariant';
 import unmountComponentAtNode from '../unmountComponentAtNode';
 import renderApplication, { getApplication } from './renderApplication';
-
+import {AlertProvider} from '../Alert/index'
 const emptyObject = {};
 const runnables = {};
 
