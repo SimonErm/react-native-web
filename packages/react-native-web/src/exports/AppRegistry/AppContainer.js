@@ -37,11 +37,9 @@ export default function AppContainer(props: Props) {
 
   return (
     <RootTagContext.Provider value={props.rootTag}>
-      <AlertProvider>
       <View pointerEvents="box-none" style={styles.appContainer}>
         {innerView}
       </View>
-      </AlertProvider>
     </RootTagContext.Provider>
   );
 }
