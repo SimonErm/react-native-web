@@ -9,7 +9,7 @@
  */
 
 import type { ComponentType } from 'react';
-
+import React from "react"
 import invariant from 'fbjs/lib/invariant';
 import unmountComponentAtNode from '../unmountComponentAtNode';
 import renderApplication, { getApplication } from './renderApplication';
@@ -25,7 +25,7 @@ export type WrapperComponentProvider = any => ComponentType<*>;
 
 let componentProviderInstrumentationHook: ComponentProviderInstrumentationHook = (
   component: ComponentProvider
-) => component();
+) => ()=><AlertProvider>{component()}</AlertProvider>;
 let wrapperComponentProvider: ?WrapperComponentProvider;
 
 export type AppConfig = {

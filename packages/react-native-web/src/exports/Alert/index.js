@@ -17,7 +17,7 @@ export class AlertProvider extends React.Component {
         return (
             <>
                 <Modal
-                    isOpen={visible}
+                    visible={visible}
                     style={{
                         content: {
                             top: '50%',
