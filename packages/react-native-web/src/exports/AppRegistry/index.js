@@ -25,7 +25,7 @@ export type WrapperComponentProvider = any => ComponentType<*>;
 
 let componentProviderInstrumentationHook: ComponentProviderInstrumentationHook = (
   component: ComponentProvider
-) => ()=><AlertProvider>{component()}</AlertProvider>;
+) => ()=><>{component()}<AlertProvider /></>;
 let wrapperComponentProvider: ?WrapperComponentProvider;
 
 export type AppConfig = {
