@@ -1,7 +1,7 @@
 import {  Button, StyleSheet, View,Modal} from '../../'
 import React from 'react';
 
-export class AlertProvider extends React.Component {
+class AlertProvider extends React.Component {
     constructor(props) {
         super(props);
         this.state = { title: '', describtion: '', buttons: [], visible: false };
@@ -61,4 +61,4 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly'
     }
 });
-export default { alert };
+export default { alert,AlertProvider };
